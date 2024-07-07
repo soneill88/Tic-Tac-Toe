@@ -18,9 +18,10 @@ const playAgainstComputerBtn = document.getElementById('computer-checkbox')
 document.addEventListener('click', (e)=>{
     if(e.target.dataset.position){
         if(!gameOver && !playAgainstComputerBtn.checked){
-        handleBoxClick(e.target.dataset.position)}
+            handleBoxClickTwoPlayer(e.target.dataset.position)
+        }
         else if(!gameOver && !turnOver && playAgainstComputerBtn.checked){
-        handleBoxClickTwoPlayer(e.target.dataset.position)
+            handleBoxClick(e.target.dataset.position)
         }
     } else if(e.target.id == 'reset-btn'){
         handleResetBtnClick(e.target.dataset.position)
